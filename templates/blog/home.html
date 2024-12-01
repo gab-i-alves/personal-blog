@@ -1,0 +1,9 @@
+<h1>Blog</h1>
+<div class="articles">
+    {% for article in articles %}
+    <article>
+        <h2>{{ article.title }}</h2>
+        <time>{{ article.date_published|date:"F j, Y" }}</time>
+    </article>
+    {% endfor %}
+</div>
