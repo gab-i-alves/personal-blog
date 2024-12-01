@@ -1,9 +1,21 @@
-<h1>Blog</h1>
-<div class="articles">
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     {% for article in articles %}
-    <article>
-        <h2>{{ article.title }}</h2>
-        <time>{{ article.date_published|date:"F j, Y" }}</time>
-    </article>
+    <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+            <h2 class="card-title">{{ article.title }}</h2>
+            <p class="text-sm text-base-content/70">
+                {{ article.date_published|date:"F j, Y" }}
+            </p>
+            <div class="card-actions justify-end">
+                <a href="{% url 'blog:article_detail' article.id %}" class="btn btn-primary">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
     {% endfor %}
 </div>
+{% endblock %}
