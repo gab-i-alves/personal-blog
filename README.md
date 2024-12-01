@@ -56,11 +56,11 @@ A personal blog application designed to write and publish articles on various to
 ## To-Do List
 
 ### 1. Models
-- [ ] Create an `Article` model with fields:
+- [X] Create an `Article` model with fields:
   - `title` (CharField)
   - `content` (TextField)
   - `date_published` (DateTimeField)
-- [ ] Run migrations to apply the model.
+- [X] Run migrations to apply the model.
 
 ### 2. Views
 - [ ] Create views for the **Guest Section**:
