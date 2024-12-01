@@ -1,0 +1,9 @@
+{% block content %}
+    <article>
+        <h1>{{ article.title }}</h1>
+        <p class="date">Published on {{ article.date_published }}</p>
+        <div class="content">
+            {{ article.content }}
+        </div>
+    </article>
+{% endblock %}
